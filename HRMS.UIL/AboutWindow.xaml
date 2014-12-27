@@ -1,0 +1,22 @@
+﻿<Window x:Class="HRMS.UIL.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="关于" Height="300" Width="400" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid Name="gdAboutInfo">
+        <TextBlock HorizontalAlignment="Left" Margin="60,30,0,0" Text="产品名称：" VerticalAlignment="Top"/>
+        <TextBlock Name="txbProductName" Text="{Binding ProductName}" HorizontalAlignment="Left" Margin="130,30,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,60,0,0" Text="版本：" VerticalAlignment="Top"/>
+        <TextBlock Name="txbVersion" Text="{Binding Version}" HorizontalAlignment="Left" Margin="130,60,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,90,0,0" Text="版权：" VerticalAlignment="Top"/>
+        <TextBlock Name="txbCopyLeft" Text="{Binding CopyLeft}" HorizontalAlignment="Left" Margin="130,90,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,130,0,0" Text="公司名称：" VerticalAlignment="Top"/>
+        <TextBlock Name="txbCompanyName" Text="{Binding CompanyName}" HorizontalAlignment="Left" Margin="130,130,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,160,0,0" Text="网址：" VerticalAlignment="Top"/>
+        <TextBlock Name="txbWebsite" HorizontalAlignment="Left" Margin="130,160,0,0" VerticalAlignment="Top">
+            <Hyperlink Name="hylWebsite" NavigateUri="{Binding Website}" TextDecorations="{x:Null}" Click="hylWebsite_Click">点击访问公司主页</Hyperlink>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="60,190,0,0" Text="电话：" VerticalAlignment="Top"/>
+        <TextBlock Name="txbTelephone" Text="{Binding Telephone}" HorizontalAlignment="Left" Margin="130,190,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
